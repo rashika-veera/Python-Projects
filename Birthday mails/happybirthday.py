@@ -28,16 +28,16 @@ Thanks
 Rashika
 '''
 
-from_address = 'rashikaveera@gmail.com'
+from_address = 'Your mail id'
 # You may need to create an app password for Gmail here: https://myaccount.google.com/apppasswords
-password = 'dtexbpdxwcjazkdj'
+password = '*******'
 context = ssl.create_default_context()
 
 
 
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as server:
     server.login(from_address, password)
-    with open('customers.csv') as file:
+    with open('Persons.csv') as file:
         reader = csv.reader(file)
         for name, email, bday_date in reader:
             # print(bday_date,todays)
